@@ -18,8 +18,16 @@ obj-$(CONFIG_BLK_DEV_THROTTLING)	+= blk-throttle.o
 obj-$(CONFIG_IOSCHED_NOOP)	+= noop-iosched.o
 obj-$(CONFIG_IOSCHED_DEADLINE)	+= deadline-iosched.o
 obj-$(CONFIG_IOSCHED_CFQ)	+= cfq-iosched.o
+obj-$(CONFIG_IOSCHED_BFQ)	+= bfq-iosched.o
 obj-$(CONFIG_IOSCHED_TEST)	+= test-iosched.o
+<<<<<<< HEAD
 
+=======
+obj-$(CONFIG_IOSCHED_ZEN)       += zen-iosched.o
+obj-$(CONFIG_IOSCHED_FIOPS)     += fiops-iosched.o
+obj-$(CONFIG_IOSCHED_SIO)       += sio-iosched.o
+obj-$(CONFIG_IOSCHED_MAPLE)     += maple-iosched.o
+>>>>>>> 1c539b00355... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
 obj-$(CONFIG_BLOCK_COMPAT)	+= compat_ioctl.o
 obj-$(CONFIG_BLK_CMDLINE_PARSER)	+= cmdline-parser.o
 obj-$(CONFIG_BLK_DEV_INTEGRITY) += bio-integrity.o blk-integrity.o t10-pi.o
