@@ -96,7 +96,10 @@ choice
 	config DEFAULT_CFQ
 		bool "CFQ" if IOSCHED_CFQ=y
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b482ec3c12dd... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
 	config DEFAULT_BFQ
 		bool "BFQ" if IOSCHED_BFQ=y
 		help
@@ -110,7 +113,10 @@ choice
 	config DEFAULT_MAPLE
 		bool "Maple" if IOSCHED_MAPLE=y
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b482ec3c12dd... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
 	config DEFAULT_NOOP
 		bool "No-op"
 
@@ -141,7 +147,11 @@ config DEFAULT_IOSCHED
 	default "zen" if DEFAULT_ZEN
 	default "fiops" if DEFAULT_FIOPS
 	default "sio" if DEFAULT_SIO
+<<<<<<< HEAD
 >>>>>>> 1c539b00355... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
+=======
+	default "maple" if DEFAULT_MAPLE
+>>>>>>> ab3d832909e... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
 
 	default "maple" if DEFAULT_MAPLE
 endmenu
