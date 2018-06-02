@@ -331,9 +331,6 @@ static int xhci_stop_device(struct xhci_hcd *xhci, int slot_id, int suspend)
 		ret = -ETIME;
 	}
 
-err_cmd_queue:
-
-cmd_cleanup:
 	xhci_free_command(xhci, cmd);
 	return ret;
 }
@@ -862,9 +859,8 @@ static int xhci_ehset_single_step_set_feature(struct usb_hcd *hcd, int port)
 		retval = -ETIMEDOUT;
 		xhci_err(xhci, "%s IN stage timed out on ep0\n", __func__);
 	}
-out1:
 	usb_free_urb(urb);
-cleanup:
+
 	kfree(dr);
 	kfree(buf);
 	return retval;
@@ -1237,7 +1233,7 @@ int xhci_hub_control(struct usb_hcd *hcd, u16 typeReq, u16 wValue,
 		}
 		break;
 	default:
-error:
+
 		/* "stall" on error */
 		retval = -EPIPE;
 	}
