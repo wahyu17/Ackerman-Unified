@@ -725,13 +725,10 @@ static inline size_t usb_ep_align(struct usb_ep *ep, size_t len)
 static inline size_t
 usb_ep_align_maybe(struct usb_gadget *g, struct usb_ep *ep, size_t len)
 {
-<<<<<<< HEAD
 	return !g->quirk_ep_out_aligned_size ? len :
 			max_t(size_t, 512,
 			round_up(len, (size_t)ep->desc->wMaxPacketSize));
-=======
 	return g->quirk_ep_out_aligned_size ? usb_ep_align(ep, len) : len;
->>>>>>> v3.18.103
 }
 
 /**
