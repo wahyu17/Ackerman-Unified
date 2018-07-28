@@ -47,8 +47,6 @@ config IOSCHED_CFQ
 
 	  This is the default I/O scheduler.
 
-<<<<<<< HEAD
-=======
 config IOSCHED_ZEN
 	tristate "Zen I/O scheduler"
 	default y
@@ -75,7 +73,6 @@ config IOSCHED_SIO
 	  mainly for aleatory access devices (eg: flash devices).
 
 
->>>>>>> 1c539b00355... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
 config CFQ_GROUP_IOSCHED
 	bool "CFQ Group Scheduling support"
 	depends on IOSCHED_CFQ && BLK_CGROUP
@@ -96,10 +93,7 @@ choice
 	config DEFAULT_CFQ
 		bool "CFQ" if IOSCHED_CFQ=y
 
-<<<<<<< HEAD
 
-=======
->>>>>>> b482ec3c12dd... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
 	config DEFAULT_BFQ
 		bool "BFQ" if IOSCHED_BFQ=y
 		help
@@ -113,15 +107,8 @@ choice
 	config DEFAULT_MAPLE
 		bool "Maple" if IOSCHED_MAPLE=y
 
-<<<<<<< HEAD
-
-=======
->>>>>>> b482ec3c12dd... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
 	config DEFAULT_NOOP
 		bool "No-op"
-
-<<<<<<< HEAD
-=======
 
 	config DEFAULT_ZEN
 		bool "ZEN" if IOSCHED_ZEN=y
@@ -133,7 +120,6 @@ choice
 		bool "FIOPS" if IOSCHED_FIOPS=y
 
 
->>>>>>> 1c539b00355... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
 endchoice
 
 config DEFAULT_IOSCHED
@@ -141,17 +127,11 @@ config DEFAULT_IOSCHED
 	default "deadline" if DEFAULT_DEADLINE
 	default "cfq" if DEFAULT_CFQ
 	default "noop" if DEFAULT_NOOP
-<<<<<<< HEAD
-=======
 
 	default "zen" if DEFAULT_ZEN
 	default "fiops" if DEFAULT_FIOPS
 	default "sio" if DEFAULT_SIO
-<<<<<<< HEAD
->>>>>>> 1c539b00355... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
-=======
 	default "maple" if DEFAULT_MAPLE
->>>>>>> ab3d832909e... block: [Introduded for 3.18.y] Add Maple I/O Scheduler
 
 	default "maple" if DEFAULT_MAPLE
 endmenu
