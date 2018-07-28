@@ -648,7 +648,7 @@ int snd_rawmidi_output_params(struct snd_rawmidi_substream *substream,
 {
 	char *newbuf;
 	char *oldbuf;
-	char *newbuf, *oldbuf;
+	
 	struct snd_rawmidi_runtime *runtime = substream->runtime;
 	unsigned long flags;
 
@@ -698,7 +698,7 @@ int snd_rawmidi_input_params(struct snd_rawmidi_substream *substream,
 {
 	char *newbuf;
 	char *oldbuf;
-	char *newbuf, *oldbuf;
+	
 	struct snd_rawmidi_runtime *runtime = substream->runtime;
 	unsigned long flags;
 
