@@ -1137,6 +1137,7 @@ config TOUCHSCREEN_MAXIM_STI
 
 source "drivers/input/touchscreen/gt9xx/Kconfig"
 
+<<<<<<< HEAD
 source "drivers/input/touchscreen/FT8716/Kconfig"
 source "drivers/input/touchscreen/FT8006m/Kconfig"
 
@@ -1161,4 +1162,18 @@ source "drivers/input/touchscreen/GT917D/Kconfig"
 config TOUCHSCREEN_LOCKDOWN_INFO
 	bool "lockdown info"
 	default n
+=======
+config TOUCHSCREEN_HIMAX_CHIPSET
+	bool "Himax touchpanel CHIPSET"
+	depends on I2C
+	help
+	  Say Y here if you have a Himax CHIPSET touchscreen.
+	  HIMAX controllers are multi touch controllers which can
+	  report 10 touches at a time.
+
+          If unsure, say N.
+
+source "drivers/input/touchscreen/hxchipset/Kconfig"
+
+>>>>>>> c695c39404782aa2c7a36ef70ef6dc5db615f0a7
 endif
