@@ -17,6 +17,10 @@
  */
 
 #include <linux/atomic.h>
+<<<<<<< HEAD
+=======
+#include <linux/device.h>
+>>>>>>> c8b6ef6fda04b33fa33c3309f521fa3c98ba835f
 #include <linux/err.h>
 #include <linux/file.h>
 #include <linux/freezer.h>
@@ -404,7 +408,12 @@ static void ion_handle_get(struct ion_handle *handle)
 }
 
 /* Must hold the client lock */
+<<<<<<< HEAD
 static struct ion_handle* ion_handle_get_check_overflow(struct ion_handle *handle)
+=======
+static struct ion_handle *ion_handle_get_check_overflow(
+					struct ion_handle *handle)
+>>>>>>> c8b6ef6fda04b33fa33c3309f521fa3c98ba835f
 {
 	if (atomic_read(&handle->ref.refcount) + 1 == 0)
 		return ERR_PTR(-EOVERFLOW);
