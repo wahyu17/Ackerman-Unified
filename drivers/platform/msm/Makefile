@@ -26,7 +26,4 @@ obj-$(CONFIG_QPNP_VIBRATOR) += qpnp-vibrator.o
 obj-$(CONFIG_MSM_AVTIMER) += avtimer.o
 obj-$(CONFIG_MSM_11AD) += msm_11ad/
 obj-$(CONFIG_MSM_MHI_DEV) += mhi_dev/
-<<<<<<< HEAD
 obj-$(CONFIG_SSM) += ssm.o
-=======
->>>>>>> c695c39404782aa2c7a36ef70ef6dc5db615f0a7
